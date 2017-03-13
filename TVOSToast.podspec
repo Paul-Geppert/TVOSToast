@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TVOSToast"
-  s.version      = "0.8"
+  s.version      = "0.9"
   s.summary      = "Toast component for tvOS with built-in siri remote hint support"
 
   # This description is used to generate tags and improve search results.
@@ -25,10 +25,10 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-Toast component for tvOS with built-in siri remote hint support.
+                    Toast component for tvOS with built-in siri remote hint support.
                    DESC
 
-  s.homepage     = "https://github.com/movielala/TVOSToast"
+  s.homepage     = "hhttps://github.com/Paul-Geppert/TVOSToast"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -80,7 +80,7 @@ Toast component for tvOS with built-in siri remote hint support.
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/movielala/TVOSToast.git", :tag => "v0.8" }
+  s.source       = { :git => "https://github.com/Paul-Geppert/TVOSToast.git", :tag => "0.9" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
