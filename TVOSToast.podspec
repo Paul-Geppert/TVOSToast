@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TVOSToast"
-  s.version      = "0.9"
+  s.version      = "0.8"
   s.summary      = "Toast component for tvOS with built-in siri remote hint support"
 
   # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                     Toast component for tvOS with built-in siri remote hint support.
                    DESC
 
-  s.homepage     = "hhttps://github.com/Paul-Geppert/TVOSToast"
+  s.homepage     = "https://github.com/Paul-Geppert/TVOSToast"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -105,9 +105,12 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  s.resource_bundle = {"TVOSToastResourceBundle" => ["TVOSToast/Resources/*.png"]}
+  #s.tvos.resource_bundle = { 'TVOSToastResourceBundle' => 'TVOSToast/Resources/*.{png}' }
+  #s.tvos.resource_bundle = { 'TVOSToastResourceBundle' => ["TVOSToast/Resources/*.png"] }
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
+
+  s.resources = "TVOSToast/Resources/*.png"
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

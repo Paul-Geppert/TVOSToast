@@ -13,7 +13,7 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     let tap = UITapGestureRecognizer(target: self, action: "showToast:")
-    tap.allowedPressTypes = [UIPressType.Select.rawValue]
+    tap.allowedPressTypes = [NSNumber(value: UIPressType.select.rawValue)]
     view.addGestureRecognizer(tap)
   }
 
@@ -28,8 +28,8 @@ class ViewController: UIViewController {
   func showToastWithHintText() {
     let toast = TVOSToast(frame: CGRect(x: 0, y: 0, width: 800, height: 140))
     toast.style.position = TVOSToastPosition.Bottom(insets: 20)
-	toast.hintText = TVOSToastHintText(element: "Press the" + TVOSToastRemoteButtonType.MenuWhite + " button to exit app")
-    presentToast(toast)
+	toast.hintText = TVOSToastHintText(elements: "Press the \(TVOSToastRemoteButtonType.MenuWhite) button to exit app")
+    presentToast(toast: toast)
   }
 
   func showToastWithAttributedString() {
@@ -38,20 +38,20 @@ class ViewController: UIViewController {
     toast.attributedText = NSAttributedString(attributedStrings:
       NSAttributedString(
         text: "This is ",
-        font: UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline),
-        color: UIColor.whiteColor()),
+        font: UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline),
+        color: UIColor.white),
       NSAttributedString(
         text: "attributed string",
-        font: UIFont.italicSystemFontOfSize(25),
-        color: UIColor.whiteColor()))
-    presentToast(toast)
+        font: UIFont.italicSystemFont(ofSize: 25),
+        color: UIColor.white))
+    presentToast(toast: toast)
   }
 
   func showToastWithText() {
     let toast = TVOSToast(frame: CGRect(x: 0, y: 0, width: 800, height: 140))
     toast.style.position = TVOSToastPosition.TopRight(insets: 20)
     toast.text = "This is regular text"
-    presentToast(toast)
+    presentToast(toast: toast)
   }
 }
 
